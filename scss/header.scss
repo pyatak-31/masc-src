@@ -1,0 +1,215 @@
+/*Шапка*/
+.header {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__auxiliary {}
+
+    &__navigation {}
+}
+
+/*Вспомогательный блок*/
+.auxiliary {
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;
+    padding: 10px 0;
+    
+    /*Логотип*/
+    &__logo {
+        max-width: 250px;
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    &__search {}
+
+    &__communication {}
+}
+
+/*Поиск*/
+.search {
+
+    &__field {
+        padding: 10px;
+        font-size: 20px;
+        border: $translucentBorder;
+    }
+
+    &__btn {
+        margin: 0 0 0 15px;
+        padding: 10px;
+        font-size: 21px;
+        color: $thirdFontColor;
+        background-color: $mainBgColor;
+        border: 0;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $mainBgColorHover;
+        }
+    }
+}
+
+/*Связь*/
+.communication {
+    text-align: right;
+    
+    &__cart {
+        display: inline-block;
+        padding: 5px;
+        color: $secondFontColor;
+        font-size: 14px;
+        border: $translucentBorder;
+    }
+
+    &__telephone {
+        display: block;
+        text-decoration: none;
+        color: $secondFontColor;
+        font-size: 30px;
+        font-weight: bold;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            color: $mainFontColorHover  ;
+        }
+    }
+
+    &__links {
+        font-size: 14px;
+
+        &-link {
+            text-decoration: none;
+            color: $mainFontColor;
+            transition: $transition;
+
+            &:hover,
+            &:focus {
+                color: $mainFontColorHover;
+            }
+        }
+    }
+}
+
+/*Навигация*/
+.navigation {
+    /*Главное меню*/
+    &__list {
+        display: flex;
+        list-style: none;
+        font-size: 16px;
+        text-transform: uppercase;
+        background-color: $secondBgColor;
+    }
+
+    &__item {
+        position: relative;
+        border-right: $translucentBorder;
+        transition: $transition;
+
+        &-all {
+            width: 20%;
+            border: 0;
+        }  
+    }
+
+    .mouse &__item:hover .navigation__sub-list,
+    .mouse &__item:focus-within .navigation__sub-list {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__link {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: $thirdFontColor;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $secondBgColorHover;
+        }
+
+        &-all {
+            background-color: $mainBgColor;
+
+            &:hover,
+            &:focus {
+                background-color: $mainBgColorHover;
+            }
+        }
+
+        &-parent {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    &__menu-arrow {
+        display: none;
+        position: absolute;
+        top: 38%;
+        right: 5px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid $thirdFontColor;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+
+        &.active {
+            transform: rotate(180deg);
+        }
+    }
+
+    .touch &__menu-arrow {
+        display: block;
+    }
+
+    /*Подменю*/
+    &__sub-list {
+        position: absolute;
+        z-index: 2;
+        top: 40px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 8px 0 0 0;
+        list-style: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+    }
+
+    .touch &__sub-list.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__sub-item {
+        width: inherit;
+    }
+
+    &__sub-link {
+        display: block;
+        padding: 15px;  
+        text-decoration: none;
+        color: $thirdFontColor;
+        background-color: $secondBgColor;
+        border: $translucentBorder;
+        border-bottom: 0;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $secondBgColorHover;
+        }
+    }
+}

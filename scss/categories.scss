@@ -1,0 +1,202 @@
+/*Товары*/
+.categories {
+	display: flex;
+    flex-direction: column;
+    
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        margin: 10px 0;
+    }
+
+    &__title {
+        color: $secondFontColor;
+        font-size: 25px;
+    }
+
+    &__link {
+        margin: 0 0 3px 10px;	
+        text-decoration: none;
+        color: $mainFontColor;
+        font-size: 15px;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            color: $mainFontColorHover;
+            text-decoration: underline;
+        }
+    } 
+}
+
+.products {
+	display: flex;
+	justify-content: space-between;
+    list-style: none;
+    
+    &__product {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        border: $translucentBorder;
+        transition: $transition;
+    }
+
+    &__product:hover {
+        box-shadow: 0 0 20px -10px black;
+    }
+}
+
+/*Карточки товара*/
+.product {
+    &__labels {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    &__image {
+        padding: 10px 0;
+        width: 150px;
+    }
+
+    &__link {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        text-align: center;
+        color: $mainFontColor;
+        font-size: 15px;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            color: $mainFontColorHover;
+            text-decoration: underline;
+        }
+        
+    }
+
+    &__link
+    &__rating {
+        display: flex;
+    }
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__check--new,
+    &__check--hit,
+    &__check--discount {
+        display: none;
+    }
+
+    &-all {
+        display: none;
+        margin: 3px 0;
+        padding: 5px;
+        color: $thirdFontColor;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    &__hit {
+        background-color: #8F0437;
+    }
+
+    &__discount {
+        background-color: #8F0437;
+    }
+
+    &__new {
+        background-color: #008F0B;
+    }
+
+    &__check--hit:checked + .labels__hit,
+    &__check--discount:checked + .labels__discount,
+    &__check--new:checked + .labels__new {
+        display: inline-block;
+    }
+}
+
+.rating {
+    &__list {
+        display: flex;
+        flex-direction: row-reverse;
+        list-style: none;
+    }
+
+    &__item {
+        color: #595959;
+        font-size: 30px;
+    }
+
+    [data-total-value="1"] &__item:nth-child(n + 5),
+    [data-total-value="2"] &__item:nth-child(n + 4),
+    [data-total-value="3"] &__item:nth-child(n + 3),
+    [data-total-value="4"] &__item:nth-child(n + 2),
+    [data-total-value="5"] &__item:nth-child(n + 1) {
+        color:#E8B133;
+    }
+}
+
+.add-block {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+    padding: 20px;	
+    
+    &__price {
+        color: $secondFontColor;
+        font-size: 20px;
+    }
+
+    &__btn {
+        padding: 10px; 	
+        color: $thirdFontColor;
+        font-weight: bold;
+        background-color: $mainBgColor;
+        border: none;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $mainBgColorHover;
+        }
+    }
+}
+
+.product__comparison {
+	width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    
+    &-btn {
+        margin: 10px;
+        color: $secondFontColor;
+        background-color: $thirdFontColor;
+        border: none;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            color: $mainFontColorHover;
+        }
+    }
+}   

@@ -1,0 +1,48 @@
+/*Новости*/
+.news {
+    &__title {
+        color: $secondFontColor;
+    }
+
+    &__list {
+        margin: 20px 0 0 0;
+        list-style: none;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 10px 0;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $mainBgColor;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            color: $mainBgColorHover;
+        }
+
+        &--all {
+            text-decoration: none;
+            color: $secondFontColor;
+            transition: $transition;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+                color: $mainBgColorHover;
+            }
+        }
+    }
+
+    &__date {
+        color: $secondFontColor;
+        font-size: 13px;
+    }
+}

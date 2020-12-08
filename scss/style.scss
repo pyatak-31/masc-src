@@ -1,0 +1,33 @@
+@import 'normalize.scss';
+@import 'swiper-bundle';
+
+// === Fonts ===
+@import 'fonts';
+
+// === Mixins ===
+@mixin font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+// === Variables ===
+@import 'variables';
+
+// === Common ===
+@import 'common';
+
+// === Header ===
+@import 'header';
+
+// === Main ===
+@import 'special';
+@import 'categories';
+@import 'subscription';
+
+// === Aside ===
+@import 'menu';
+@import 'news';
+@import 'track';
+@import 'certificate';
+
+// === Footer ===
+@import 'footer';

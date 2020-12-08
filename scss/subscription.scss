@@ -1,0 +1,41 @@
+/*Подписка на новости*/
+.subscription {
+    margin: 50px 0 0 0;
+    
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        background-color: #f3f3f3;
+    }
+
+    &__title {
+        color: $secondFontColor;
+        font-size: 20px;
+    }
+
+    &__email {
+        width: 50%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    &__btn {
+        width: 25%;
+        padding: 15px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: $secondBgColor;
+        border: none;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $secondBgColorHover;
+        }
+    }
+}

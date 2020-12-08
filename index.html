@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маске Рад</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body class="body">
+    <!--Шапка сайта-->
+    @@include("_header.html")
+
+    <!--Основной контент-->
+    <div class="content-wrapper">
+		<div class="container">
+            <!--Главный блок-->
+            <main class="main">
+                <!--Специальные предложения-->
+                @@include("_special.html")
+
+                <!--Товары-->
+                @@include("_categories.html")
+                
+                <!--Подписка-->
+                @@include("_subscription.html")
+            </main>
+            
+            <!--Боковая панель-->
+            <aside class="side-bar">
+                <!--Меню товаров-->
+                @@include("_menu.html")
+
+                <!--Новости-->
+                @@include("_news.html")
+
+                <!--Отследить заказ-->
+                @@include("_track.html")
+
+                <!--Подарочный сертификат-->
+                @@include("_certificate.html")
+            </aside>
+        </div>
+    </div>
+    
+    <!--Подвал сайта-->
+    @@include("_footer.html")
+    
+    <script src="js/js.min.js"></script>
+</body>
+</html>

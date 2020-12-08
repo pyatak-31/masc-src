@@ -1,0 +1,254 @@
+/*Специальные предложения*/
+.special {
+	display: flex;
+	justify-content: space-between;
+	min-width: 0;
+
+	&__image-slider {}
+	
+	&__stock {}
+}
+
+/*Слайдер*/
+.image-slider {
+    position: relative;
+    max-width: 650px;
+
+    &__wrapper {
+        padding: 0 0 30px 0;
+        list-style: none;
+    }
+
+	&__slide {
+		position: relative;
+	}
+	
+	&__text {
+		position: absolute;
+		top: 50px;
+		z-index: 1;
+		font-size: 30px;
+
+		&-new-year {
+			left: 100px;
+			color: $thirdFontColor;
+			text-shadow: 0 0 5px #eaf0a3;
+		}
+
+		&-costume {
+			left: 50px;
+			color: #DB0B57;
+			text-shadow: 0 0 10px  #eaf0a3;
+		}
+	}
+
+	&__link {
+		position: absolute;
+		z-index: 1;
+		
+		bottom: 50px;
+		padding: 20px;	
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $secondFontColor;
+		font-size: 20px;
+		font-weight: bold;
+		
+		border-radius: 50px;
+		
+		transition: $transition;
+
+		&-new-year {
+			right: 50px;
+			color: $secondFontColor;
+			background-color: #fff;
+			box-shadow: 0 0 5px #eaf0a3;
+
+			&:hover,
+			&:focus {
+				background-color:#eaf0a3;
+				box-shadow: 0 0 10px #eaf0a3;
+			}
+		}
+
+		&-costume {
+			right: 30px;
+			color: $thirdFontColor;
+			background-color: $mainBgColor;
+			box-shadow: 0 0 5px $mainBgColor;
+
+			&:hover,
+			&:focus {
+				background-color: $mainBgColorHover;
+				box-shadow: 0 0 10px $mainBgColorHover;
+			}
+		}
+	}
+
+    &__image {
+        max-width: 650px;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+	}
+	
+	&__button-prev,
+	&__button-next {
+		position: absolute;
+		top: 45%;
+		z-index: 1;
+		width: 30px;
+		height: 30px;
+		background-size: cover;
+		cursor: pointer;
+	}
+
+	&__button-prev {
+		left: 0;
+		background-image: url("../img/prev.png");
+	}
+
+	&__button-next {
+		right: 0;
+		background-image: url("../img/next.png");
+	}
+	
+	&__pagination {
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+		text-align: center;		
+	}
+    
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        background-color:  $mainBgColor;
+    }
+}
+
+/*Товар со скидкой*/
+.stock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, .1);
+
+	&__title {
+		font-size: 25px;
+		color: $secondFontColor;
+		border-bottom: 3px dotted $mainBgColor;
+	}
+
+	&__timer {
+		margin: 20px 0 0 0;
+	}
+
+	&__image {
+		position: relative;
+		width: 150px;
+	}
+
+	&__image img {
+		width: 100%;
+	}
+
+	&__check {
+		display: none;
+	}
+
+	&__check:checked + .stock__label {
+		position: absolute;
+		right: -50px;
+		bottom: 10px;
+		display: inline-block;
+		margin: 3px 0;
+		padding: 10px;
+		text-align: center;
+		color: white;
+		font-size: 18px;
+		font-weight: bold;
+		background-color: $mainBgColor;
+		border-radius: 50%;
+	}
+
+	&__name {
+		display: block;
+		text-decoration: none;
+		color: $mainBgColor;
+		font-size: 18px;
+		font-weight: bold;
+		transition: $transition;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			color: $mainFontColorHover;
+		}
+	}
+
+	&__price {
+		color: $secondFontColor;
+		font-size: 16px;
+		line-height: 26px;
+
+		&-old {
+			text-decoration: line-through;
+		}
+
+		&-new {
+			font-weight: bold;
+		}
+	}
+
+	&__buy {
+		display: inline-block;
+		margin: 10px 0 0 0;
+		padding: 10px;
+		text-decoration: none;
+		color: #fff;
+		font-weight: bold;
+		background-color: $mainBgColor;
+		transition: $transition;
+
+		&:hover,
+		&:focus {
+			background-color: $mainBgColorHover;
+		}
+	}
+}
+
+/*Таймер*/
+.timer {
+	color: black;
+	text-align: center;
+
+	&__container {
+		display: flex;
+	}
+
+	&__numbers {
+		color: white;
+		font-size: 30px;
+		margin-right: 10px;
+	}
+
+	&__number {
+		background-color: $secondBgColor;
+		border-radius: 10px;
+		padding: 5px;
+	}
+
+	&__description {
+		margin: 5px 0 0 0;
+		font-size: 13px;
+		text-align: center;
+		color: black;
+	}
+}

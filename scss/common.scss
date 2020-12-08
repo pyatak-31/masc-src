@@ -1,0 +1,62 @@
+// === Common ===
+*,
+*:before, 
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.body {
+    @include font-montserrat;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.content-wrapper {
+    margin: 20px 0 0 0;
+    
+    .container {
+        display: flex;
+	    justify-content: space-between;
+    }
+}
+
+.main {
+	width: 100%;
+}
+
+.side-bar {
+	position: relative;
+	order: -1;
+	width: 25%;
+    margin: 0 10px 0 0;
+    
+    &__news {
+        margin: 30px 0 0 0;	
+    }
+
+    &__track {
+        margin: 30px 0 0 0;
+    }
+
+    &__certificate {
+        margin: 30px 0 0 0;
+    }
+}

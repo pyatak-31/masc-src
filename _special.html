@@ -1,0 +1,95 @@
+<!--Специальные предложения-->
+<section class="special">
+    <!--Слайдер-->
+    <div class="image-slider swiper-container special__image-slider">
+        <ul class="image-slider__wrapper swiper-wrapper">
+            <li class="image-slider__slide swiper-slide">
+                <p class="image-slider__text image-slider__text-new-year">Крутые новогодние наборы!</p>
+                <a href="#" class="image-slider__link image-slider__link-new-year">Подробнее</a>
+                <div class="image-slider__image">
+                    <picture>
+                        <source 
+                            srcset="img/slider-1@2x.webp 2x,
+                                    img/slider-1.webp 1x" 
+                            type="image/webp">
+                            
+                        <source 
+                            srcset="img/slider-1@2x.jpg 2x,
+                                    img/slider-1.jpg 1x" 
+                            type="image/jpeg">      
+                        <img src="img/slider-1.jpg" alt="Новогодние наборы">
+                    </picture>
+                </div>
+            </li>
+
+            <li class="image-slider__slide swiper-slide">
+                <p class="image-slider__text image-slider__text-costume">Оригинальные костюмы!</p>
+                <a href="#" class="image-slider__link image-slider__link-costume">Подробнее</a>
+                <div class="image-slider__image">
+                    <picture>
+                        <source 
+                            srcset="img/slider-2@2x.webp 2x,
+                                    img/slider-2.webp 1x" 
+                            type="image/webp">
+                            
+                        <source 
+                            srcset="img/slider-2@2x.jpg 2x,
+                                    img/slider-2.jpg 1x" 
+                            type="image/jpeg">    
+                        <img src="img/slider-2.jpg" alt="Оригинальные костюмы">
+                    </picture>
+                </div>
+            </li>
+        </ul>
+
+        <div class="image-slider__button-prev"></div>
+        <div class="image-slider__button-next"></div>
+
+        <!--<div class="swiper-pagination"></div>-->
+        <div class="image-slider__pagination"></div>
+    </div>
+
+    
+    
+    <!--Товар со скидкой-->
+    <div class="stock special__stock">
+        <h3 class="stock__title">Успей купить!</h3>
+        
+        <div class="timer stock__timer" id="timer">
+            <div class="timer__container">
+                <div class="timer__numbers"><div><span class="timer__number days">08</span></div><p class="timer__description">Дней</p></div>
+                <div class="timer__numbers"><div><span class="timer__number hours">18</span></div><p class="timer__description">Часов</p></div>
+                <div class="timer__numbers"><div><span class="timer__number minutes">33</span></div><p class="timer__description">Минут</p></div>
+                <div class="timer__numbers"><div><span class="timer__number seconds">44</span></div><p class="timer__description">Секунд</p></div>      
+            </div>
+          </div>
+        
+        <div class="stock__image">
+            <a href="#">
+                <picture>
+                    <source 
+                        srcset="img/horse-mask@2x.webp 2x,
+                                img/horse-mask.webp 1x" 
+                        type="image/webp">
+                        
+                    <source 
+                        srcset="img/horse-mask@2x.jpg 2x,
+                                img/horse-mask.jpg 1x" 
+                        type="image/jpeg">     
+                    <img src="img/horse-mask.jpg" alt="Маска лошади">
+                </picture>
+            </a>
+            <input type="checkbox" id="discount" name="" value="" checked class="stock__check">
+            <label for="discount" class="stock__label">50%<br>скидка</label>
+        </div>
+        
+        <a href="#" class="stock__name">Маска лошади</a>
+        
+        <div class="stock__price">
+            <p class="stock__price-old">Цена: 3200 руб.</p>
+            <p class="stock__price-new">Цена: 1600 руб.</p>
+        </div>
+        
+        <a href="#" class="stock__buy">Купить</a>
+    </div>
+</section>
